@@ -1,0 +1,72 @@
+<%
+/*///////////////////////////////////////////////////////////////////////////
+
+  各種パスの設定 : このエリアはどのテンプレートでも共通です ※編集しないでください
+
+///////////////////////////////////////////////////////////////////////////*/
+filename = filename.replace(/\\/g, '/');
+ABSOLUTE_PATH = filename.split(config.develop_dir)[filename.split(config.develop_dir).length - 1];
+RELATIVE_PATH = '../'.repeat([ABSOLUTE_PATH.split('/').length - 2]);
+INCLUDE_PATH = RELATIVE_PATH + 'include/';
+
+include(INCLUDE_PATH + 'tool/_path');
+include(INCLUDE_PATH + 'tool/_functions');
+/*///////////////////////////////////////////////////////////////////////////
+
+  ここまで編集不可エリア
+
+///////////////////////////////////////////////////////////////////////////*/
+
+/* Local Variables
+   ----------------------------------------------------------------- */
+// ページ名の設定
+const page_name = 'home';
+
+// imgディレクトリへの相対パス
+const img_path = assetsRelative() + 'img';
+-%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="shortcut icon" href="<%= img_path; %>/common/favicon.ico">
+
+  <title><%= info[page_name].title; %></title>
+
+  <meta name="description" content="<%= info[page_name].description; %>">
+  <meta name="keywords" content="<%= info[page_name].keywords; %>">
+
+  <!-- meta for sns -->
+  <meta property="og:title" content="<%= info[page_name].title; %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<%= info[page_name].url; %>" />
+  <meta property="og:image" content="<%= info[page_name].ogp_image; %>" />
+  <meta property="og:site_name" content="<%= config.site_name; %>" />
+  <meta property="og:description" content="<%= info[page_name].description; %>" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="<%= info[page_name].title; %>" />
+  <meta name="twitter:image" content="<%= info[page_name].ogp_image; %>" />
+  <meta name="twitter:description" content="<%= info[page_name].description; %>" />
+
+  <!-- local CSS -->
+  <%- include(INCLUDE_PATH + 'foundation/_styles', { css_path: assetsRelative() + 'css' }); -%>
+</head>
+
+<body id="<%= page_name; %>">
+
+<%# start page content -%>
+
+<%# end page content -%>
+
+  <!-- local JS -->
+  <%- include(INCLUDE_PATH + 'foundation/_scripts.ejs', { js_path: assetsRelative() + 'js' }); -%>
+
+</body>
+</html>

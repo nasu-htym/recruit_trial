@@ -1,0 +1,22 @@
+# 環境設定ファイル
+.env
+
+# ログファイル
+logs/
+
+# 永続化ファイル
+
+# 鍵ファイル
+certs/*
+!certs/.gitkeep
+
+# バックエンド開発関連ファイル
+
+# フロントエンド開発関連ファイル
+node_modules/
+src/iconfont/preview/*
+.tmp/
+
+# ビルドファイル
+_preview/
+_dest/

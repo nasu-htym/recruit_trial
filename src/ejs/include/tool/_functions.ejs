@@ -1,0 +1,55 @@
+<%
+/*
+ * pictureタグのセットを返す
+ * @params img_path_pc : PC用画像ファイルのパス
+ * @params img_path_sp : SP用画像ファイルのパス
+ * @params alt : 画像のalt属性のテキスト
+ * @params class_name : picture要素に付与したいクラス名
+ */
+getPictureSet = function(img_path_pc, img_path_sp, alt, class_name = '') {
+  let start_tag = class_name !== '' ? '<picture class="' + class_name + '">' : '<picture>';
+  return `
+    ${start_tag}
+      <source media="(min-width:768px)" srcset="${img_path_pc}">
+      <source media="(max-width:767px)" srcset="${img_path_sp}">
+      <img src="${img_path_pc}" alt="${alt}">
+    </picture>
+  `;
+}
+
+/*
+ * 文字列からHTMLタグを除去
+ * @params string : タグを除去したい文字列
+ */
+stripTags = function(string) {
+  return string.replace(/(<([^>]+)>)/ig, '');
+}
+
+/*
+ * 数値をゼロパディングする
+ * @params num : 対象数値
+ * @params length : 丸めたい桁数
+ */
+zeroPadding = function(num, length) {
+  return ('0000000000' + num).slice(-length);
+}
+
+/*
+ * ナンバーフォーマット
+ * @params num : 対象数値
+ */
+numberFormat = function(num) {
+
+  num = String(num);
+
+  let len = num.length;
+
+  // 再帰的に呼び出すよ
+  if(len > 3){
+      // 前半を引数に再帰呼び出し + 後半3桁
+      return numberFormat(num.substring(0, len - 3)) + ',' + num.substring(len - 3);
+  } else {
+      return num;
+  }
+}
+%>
