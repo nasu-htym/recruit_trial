@@ -1,0 +1,40 @@
+{
+  "syntax": "scss",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "string-quotes": "single",
+    "max-empty-lines": 1,
+    "no-empty-source": null,
+    "block-no-empty": null,
+    "number-leading-zero": "always",
+    "selector-combinator-space-before": "always",
+    "block-opening-brace-space-before": "always",
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "initial-scale"
+        ]
+      }
+    ],
+    "unit-no-unknown": [
+      true,
+      {
+        "ignoreUnits": [
+          "/^\\$[_0-9a-z]+$/"
+        ]
+      }
+    ]
+  }
+}

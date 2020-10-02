@@ -1,0 +1,56 @@
+<%
+/*///////////////////////////////////////////////////////////////////////////
+
+  各種パス・ディレクトリ取得用関数の設定
+
+///////////////////////////////////////////////////////////////////////////*/
+/*
+ * サイトルートからのパスを配列にして返す
+ * @params abs_path : ejs/から始まる現在のファイルの絶対パスです
+ */
+getDirHierarchy = function(abs_path = ABSOLUTE_PATH) {
+  let dir_array;
+  let file_path = abs_path.replace(/ejs\/page\//, '');
+  let count = file_path.split('/').length - 1;
+  dir_array = file_path.split('/', count);
+
+  return dir_array;
+}
+
+/*
+ * 現在のディレクトリを文字列で返す
+ * @params abs_path : ejs/から始まる現在のファイルの絶対パスです
+ */
+getCurrentDir = function(abs_path = ABSOLUTE_PATH) {
+  let dir;
+  let count = abs_path.split('/').length - 1;
+
+  dir = abs_path.split('/', count)[count - 1];
+
+  if(dir === 'page') dir = '';
+
+  return dir;
+}
+
+/*
+ * サイトルートまでの相対パスを文字列で返す
+ * @params abs_path : ejs/から始まる現在のファイルの絶対パスです
+ */
+relativePath = function(abs_path = ABSOLUTE_PATH) {
+  let depth = abs_path.replace(/^ejs\/pages\//, '').split('/').length - 1;
+  let path = 0 < depth ? '../'.repeat(depth) : './';
+
+  return path;
+}
+
+/*
+ * アセットディレクトリまでの相対パスを文字列で返す
+ * @params abs_path : ejs/から始まる現在のファイルの絶対パスです
+ */
+assetsRelative = function(file_path = null) {
+  let path = file_path == null ? relativePath() : file_path;
+
+  return path + 'assets/';
+}
+//console.log(assetsRelative());
+%>

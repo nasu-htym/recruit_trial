@@ -1,0 +1,9 @@
+{
+  "src/js/**/*.js": [
+    "eslint -c .eslintrc.js --fix",
+  ],
+  "src/scss/**/*.scss": [
+    "stylelint --config .stylelintrc.json --fix",
+    "prettier-stylelint --quiet --write",
+  ]
+}
