@@ -1,5 +1,5 @@
 {
-  "name": "recruit_kadai",
+  "name": "recruit_trial",
   "version": "1.0.0",
   "description": "リネアワークス中途採用コーディングテスト",
   "main": "index.js",
@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lineaworks/recruit_kadai.git"
+    "url": "git+https://github.com/lineaworks/recruit_trial.git"
   },
   "author": "Lineaworks",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lineaworks/recruit_kadai/issues"
+    "url": "https://github.com/lineaworks/recruit_trial/issues"
   },
-  "homepage": "https://github.com/lineaworks/recruit_kadai#readme",
+  "homepage": "https://github.com/lineaworks/recruit_trial#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
