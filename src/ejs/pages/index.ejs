@@ -24,11 +24,18 @@ const page_name = 'home';
 
 // imgディレクトリへの相対パス
 const img_path = assetsRelative() + 'img';
+
+// 定型文
+// ダミー文章
+const dummy_sent = "この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。";
+// 電話番号
+const phone_num = "0120-00-0000";
+// 電話受付時間
+const tel_message = "10:00～18:00 土日・祝日年末年始除く";
 -%>
 
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +43,9 @@ const img_path = assetsRelative() + 'img';
   <meta name="format-detection" content="telephone=no">
 
   <link rel="shortcut icon" href="<%= img_path; %>/common/favicon.ico">
+  
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet">
 
   <title><%= info[page_name].title; %></title>
 
@@ -60,8 +70,196 @@ const img_path = assetsRelative() + 'img';
 </head>
 
 <body id="<%= page_name; %>">
+<div id="top"></div>
 
 <%# start page content -%>
+<!-- header -->
+<header id="header" class="header-top">
+  
+<div id="overlay-menu" class="overlay-menu hidden">
+  <div class="title-wrap">
+    <div class="title">日本ALO音楽研究所</div>
+    <div class="border"></div>
+  </div>
+  <div class="content-wrap">
+    <div class="contact-menu">
+      <div class="mail-wrap">
+        <div class="icon">
+          <img src="<%= img_path + '/mail.png' %>">
+        </div>
+        <div class="txt">メールでのお問い合わせ</div>
+        <div class="contact-wrap">
+          <a href="#">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="tel-wrap">
+        <div class="icon">
+          <img src="<%= img_path + '/tel.png' %>">
+        </div>
+        <div class="txt">お電話でのお問い合わせ</div>
+        <div class="txt-wrap">
+          <div class="tel-num"><%= phone_num %></div>
+          <div class="message"><%= tel_message %></div>
+        </div>
+      </div>
+    </div>
+    <div class="alo-content">
+      <ul>
+        <li>ALOについて</li>
+        <li>ALOの強み</li>
+        <li>ALOの商品紹介</li>
+        <li>ご加入までの流れ</li>
+        <li>よくあるご質問</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <ul class="header-inner">
+    <li class="header-title">
+      <div class="header-title">日本AOL音楽研究所</div>
+    </li>
+    <li class="tel">
+      <ul class="tel">
+        <li><p class="name">TEL</p>
+            <p class="number"><%= phone_num %></p>
+        </li>
+        <li class="txt"><%= tel_message %></li>        
+      </ul>
+    </li>
+    <li class="contact">
+      <div class="contact-wrap">
+        <a href="#">お問い合わせ</a>
+      </div>
+    </li>
+    <li id="menu">
+      <div class="menu-wrap">
+        <img src="<%= img_path + '/menu.png' %>">
+    </div>
+    </li>
+  </ul>
+</header>
+<!-- /header -->
+
+<section class="section section-intro" id="js-section-intro">
+  <img class="back-img" src="<%= img_path + '/img1.png' %>">
+  <div class="intro-wrap">
+    <ul class="intro">
+      <li class="title"> 日本ALO音楽研究所</li>
+      <li class="logo">
+        <img class="logo" src="<%= img_path + '/logo.png' %>">
+      </li>
+      <li class="subtitle">この文章はダミーです。</li>
+      <li class="outline">ANIMAL LIBARATION ORCHESTRA</li>
+      <li class="description"><%= dummy_sent %></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-about" id="js-section-about">
+  <div class="left-about-wrap">
+    <div class="about-wrap">
+      <div class="title">ABOUT</div>
+      <div class="subtitle">ABOUT ALO [ ANIMAL LIBERATION ORCHESTRA ]</div>
+      <div class="outline">
+        この文章はダミーです。<br>
+        文字の大きさ、量、字間、<br>
+        行間等を確認するために<br>
+        入れています。</div>
+      <div class="description"><%= dummy_sent + dummy_sent %></div>
+    </div>
+    <div class="details-wrap">
+      <div class="outline">
+        この文章はダミーです。文字の大きさ、<br>
+        量、字間、行間等を確認するために<br>
+        入れています。
+      </div>
+      <div class="description"><%= dummy_sent %></div>
+    </div>
+  </div>
+  <div class="right-about-wrap">
+    <img class="frame" src="<%= img_path + '/img2.png' %>">
+    <div class="explanation-wrap">
+      <div class="title">ALO</div>
+      <div class="subtitle">ANIMAL LIBERATION ORCHESTRA</div>
+      <div class="border"></div>
+      <div class="outline"><%= dummy_sent %></div>
+    </div>
+    <img class="chair-img" src="<%= img_path + '/img3.png' %>">
+  </div>
+</section>
+
+<section class="section section-graph">
+  <div class="graph-wrap">
+    <img class="graph" src="<%= img_path + '/graph.png' %>">
+  </div>
+  <div class="explanation-wrap">
+    <div class="outline">
+      この文章はダミーです。<br>
+      文字の大きさ、量、字間、行間等を確認するため
+    <div class="description"><%= dummy_sent + dummy_sent %></div>
+  </div>
+</section>
+
+<section class="section section-product">
+  <div class="product-intro-wrap">
+    <div class="title">PRODUCT</div>
+    <div class="subtitle">PRODUCT INFORMATION</div>
+    <div class="outline">この文章はダミーです</div>
+    <div class="description"><%= dummy_sent %></div>
+  </div>
+  <div class="products-wrap">
+    <div class="product-wrap product1">
+      <img class="product-img" src="<%= img_path + '/product1.png' %>">
+      <div class="name">ダミーダミーダミー</div>
+      <div class="description"><%= dummy_sent + dummy_sent + dummy_sent %></div>
+    </div>
+    <div class="product-wrap product2">
+      <img class="product-img" src="<%= img_path + '/product2.png' %>">
+      <div class="name">ダミーダミーダミー</div>
+      <div class="description"><%= dummy_sent + dummy_sent + dummy_sent %></div>
+    </div>
+    <div class="product-wrap product3">
+      <img class="product-img" src="<%= img_path + '/product3.png' %>">
+      <div class="name">ダミーダミーダミー</div>
+      <div class="description"><%= dummy_sent + dummy_sent + dummy_sent %></div>
+    </div>
+    <div class="product-wrap product4">
+      <img class="product-img" src="<%= img_path + '/product4.png' %>">
+      <div class="name">ダミーダミーダミー</div>
+      <div class="description"><%= dummy_sent + dummy_sent + dummy_sent %></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-contact">
+  <div class="img-wrap">
+    <img class="img" src="<%= img_path + '/img4.png' %>">
+  </div>
+  <div class="tell-wrap">
+    <div class="notice">お電話でのお問い合わせはこちら</div>
+    <div class="phone-img-wrap">
+      <img src="<%= img_path + '/tel.png' %>">
+    </div>
+    <div class="txt-wrap">
+      <div class="tel-num"><%= phone_num %></div>
+      <div class="message"><%= tel_message %></div>
+    </div>
+  </div>
+  <div class="move-top-wrap">
+    <a href="#top">
+      <img class="move-top" src="<%= img_path + '/move-top.png' %>">
+    </a>
+  </div>
+</section>
+
+<footer id="footer">
+  <ul>
+    <li class="link"><a href="#">企業案内</a></li>
+    <li class="link"><a href="#">プライバシーポリシー</a></li>
+    <li class="corp">©COMPANY</li>
+  </ul>
+</footer>
 
 <%# end page content -%>
 

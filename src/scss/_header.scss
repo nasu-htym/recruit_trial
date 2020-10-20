@@ -1,0 +1,321 @@
+#header {
+    display: block;
+    z-index: 75;
+    width: 100%;
+}
+
+.header-top {
+    position: absolute;
+    .header-inner {
+        position: flex;
+        background-color: none;
+        top: 0;
+        height: 4rem;
+        padding-top: 0.6rem;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        li.header-title{
+            width: 58%;
+            text-align: left;
+            padding-left: 4rem;
+            color: #fff;
+            font-weight: 100;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        li.tel {
+            text-align: left;
+            width: 18%;
+            ul.tel{
+                color: #fff;
+                p {
+                    display: inline-block;
+                }  
+                .name {
+                    vertical-align: top;
+                    padding-top: 5px;
+                    border-bottom: solid 1px #fff;
+                    padding-bottom: 1.5px;
+                    font-size: 0.6rem;
+                    font-family: 'Lato', sans-serif;
+                    letter-spacing: 2px;
+                }
+                .number {
+                    margin-left: 3px;
+                    font-size: 1.3rem;
+                    font-family: 'Lato', sans-serif;
+                }
+                li.txt {
+                    display: block;
+                    font-size: 0.15rem;
+                }
+            }
+        }
+
+        li.contact {
+            display: inline-block;
+            width: 17%;
+            .contact-wrap{
+                color: #fff;
+                background-color: #000;
+                font-size:0.75em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 2.4rem;
+                text-align: center;
+                border:1px solid #fff;
+                > a{
+                    display:block;
+                    color: #fff;
+                    font-size: 0.7rem;
+                    text-decoration: none;
+                }    
+            }
+        }
+
+        li.menu {
+            display: inline-block;
+            width: auto;
+            .menu-wrap {
+                display: flex;
+                align-items: left;
+                justify-content: left;
+                img {
+                    height: 1.5rem;
+                    width: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+.header-fixed {
+    position: fixed;
+    .header-inner {
+        position: flex;
+        background-color: #fff;
+        top: 0;
+        height: 4rem;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        li.header-title{
+            width: 58%;
+            text-align: left;
+            padding-left: 4rem;
+            padding-top: 0.6rem;
+            color: #000;
+            font-weight: 100;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        li.tel {
+            text-align: left;
+            width: 18%;
+            padding-top: 0.6rem;
+            ul.tel{
+                color: #000;
+                p {
+                    display: inline-block;
+                }  
+                .name {
+                    vertical-align: top;
+                    padding-top: 5px;
+                    border-bottom: solid 1px #fff;
+                    padding-bottom: 1.5px;
+                    font-size: 0.6rem;
+                    font-family: 'Lato', sans-serif;
+                    letter-spacing: 2px;
+                }
+                .number {
+                    margin-left: 3px;
+                    font-size: 1.3rem;
+                    font-family: 'Lato', sans-serif;
+                }
+                li.txt {
+                    display: block;
+                    font-size: 0.15rem;
+                }
+            }
+        }
+
+        li.contact {
+            display: inline-block;
+            width: 17%;
+            padding-top: 0.6rem;
+            .contact-wrap{
+                color: #000;
+                background-color: #fff;
+                font-size:0.75em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 2.4rem;
+                text-align: center;
+                border:1px solid #000;
+                > a{
+                    display:block;
+                    color: #000;
+                    font-size: 0.7rem;
+                    text-decoration: none;
+                }    
+            }
+        }
+
+        li.menu {
+            display: inline-block;
+            width: auto;
+            .menu-wrap {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 4rem;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #000;
+                img {
+                    height: 1.5rem;
+                    width: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+
+.overlay-menu {
+    position: absolute;
+    display: block;
+    z-index: 99;
+    left: 3.5rem;
+    top: 1rem;
+    width: 90%;
+    height: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 7rem 0 8rem 10rem;    
+}
+
+.title-wrap {
+    display: block;
+    .title {
+        font-size: 1.3rem;
+        letter-spacing: 1.7px;
+        font-weight: 100;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    .border {
+        margin-top: 1.2rem;
+        width: 80%;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+div.content-wrap {
+    display: block;
+    width: 100%;
+
+    div.contact-menu {
+        margin-top: 4rem;
+        margin-left: 3rem;
+        float:left;
+        width: 50%;
+        font-size: 0.75rem;
+
+        .icon img {
+            width: 2.7rem;
+            margin-right: 1.5rem;
+            height: auto;
+        } 
+
+        .mail-wrap {
+            .icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .txt {
+                display: inline-block;
+                vertical-align: middle;
+                font-family: 'Noto Sans JP', sans-serif;
+            }
+            .contact-wrap{
+                margin: 0.5rem 0 0 4rem;
+                color: #fff;
+                background-color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 15.5rem;
+                height: 2.1rem;
+                text-align: center;
+                border: 1px solid #fff;
+                > a{
+                    display:block;
+                    color: #fff;
+                    font-size: 0.5rem;
+                    text-decoration: none;
+                }    
+            }
+        }
+
+        .tel-wrap {
+            margin-top: 2.5rem;
+            .icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .txt {
+                display: inline-block;
+                vertical-align: middle;
+                font-family: 'Noto Sans JP', sans-serif;
+            }
+            .txt-wrap {
+                margin-top: -0.1rem;
+                margin-left: 4.5rem;
+                .tel-num {
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    font-family: 'Lato', sans-serif;
+                }
+                .message {
+                    margin-top: 0.1rem;
+                    font-size: 0.35rem;
+                    font-weight: 100;
+                    font-family: 'Noto Sans JP', sans-serif;
+                }
+            }
+
+        }
+    }
+
+    div.alo-content {
+        margin-top: 4rem;
+        float: left;
+        width: 30%;
+        ul {
+            list-style: none; 
+        }
+        li {
+            margin-top: 1.4rem;
+            font-size: 0.8rem;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    }
+  
+}
+
+.hidden{
+    display: none;
+}

@@ -36,4 +36,39 @@ import EVENTS from '~/constants/event-names';
     }
   }
   window.addEventListener(EVENTS.LOAD, onLoad);
+
+  ////スクロールでヘッダ変更////
+  function changeHeader() {
+    // ヘッダー表示タイミング調整
+    const timing = 650; // sectionが切り替わる直前
+
+    //スクロールの高さを取得
+    let scroll = window.pageYOffset;
+
+    const header = document.getElementById('header');
+
+    let trigger1 = document.getElementById('js-section-intro');
+    let trigger2 = document.getElementById('js-section-about');
+
+    let trigger1Y = trigger1.getBoundingClientRect().top; // ウィンドウ上からの要素の位置
+    let trigger2Y = trigger2.getBoundingClientRect().top;
+
+    if (scroll > (trigger2Y + timing)) {
+      header.classList.remove('header-top');
+      header.classList.add('header-fixed');
+    } else {
+      header.classList.remove('header-fixed');
+      header.classList.add('header-top');
+    }
+  }
+  window.addEventListener('scroll', changeHeader);
+  
+  ////メニュー表示////
+  function hamburger() {
+    document.getElementById('overlay-menu').classList.toggle('hidden');
+  }
+  document.getElementById('menu').addEventListener('click' , function () {
+    hamburger();
+  } );
+
 })();
