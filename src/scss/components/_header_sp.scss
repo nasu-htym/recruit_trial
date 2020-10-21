@@ -1,0 +1,82 @@
+
+#header {
+    display: block;
+    z-index: 75;
+    width: 100%;
+}
+
+#overlay-menu {
+    display: none;
+}
+
+.header-top {
+    position: fixed;
+    width: 100%;
+    
+    ul.header-inner {
+        display: block;
+        background-color: #fff;
+        top: 0;
+        height: 4rem;
+
+        li {
+            padding-top: 1.2rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        li.header-title{
+            margin-top: -0.5rem;
+            margin-right: 45%;
+            width: auto;
+            text-align: left;
+            margin-left: 0.9rem;
+            color: #000;
+            font-weight: 100;
+            font-size: 1rem;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        li.tel {
+            margin-right: 0.8rem;
+            ul.tel {
+                display: none;
+            }
+            img.tel-icon {
+                width: 1.3rem;
+                height: auto;
+            }
+        }
+
+        li.contact {
+            .contact-wrap{
+                display: none;   
+            }
+            img.mail-icon {
+                width: 1.5rem;
+                height: auto;
+            }
+
+        }
+
+        li#menu {
+            margin-right: auto;
+            .menu-wrap {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 4rem;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #000;
+                img {
+                    height: 1.7rem;
+                    width: 1.7rem;
+                }
+            }
+        } 
+    }
+}
+

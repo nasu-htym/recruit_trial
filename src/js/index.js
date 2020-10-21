@@ -53,22 +53,33 @@ import EVENTS from '~/constants/event-names';
     let trigger1Y = trigger1.getBoundingClientRect().top; // ウィンドウ上からの要素の位置
     let trigger2Y = trigger2.getBoundingClientRect().top;
 
-    if (scroll > (trigger2Y + timing)) {
-      header.classList.remove('header-top');
-      header.classList.add('header-fixed');
-    } else {
-      header.classList.remove('header-fixed');
-      header.classList.add('header-top');
+    // SP画面の時は変化しない
+    if (window.innerWidth > 767 ) {
+      if (scroll > (trigger2Y + timing)) {
+        header.classList.remove('header-top');
+        header.classList.add('header-fixed');
+      } else {
+        header.classList.remove('header-fixed');
+        header.classList.add('header-top');
+      }
     }
   }
   window.addEventListener('scroll', changeHeader);
   
   ////メニュー表示////
-  function hamburger() {
+  function openMenu() {
     document.getElementById('overlay-menu').classList.toggle('hidden');
   }
   document.getElementById('menu').addEventListener('click' , function () {
-    hamburger();
+    openMenu();
+  } );
+    
+  ////メニュー閉じる////
+  function closeMenu() {
+    document.getElementById('overlay-menu').classList.add('hidden');
+  }
+  document.getElementById('close').addEventListener('click' , function () {
+    closeMenu();
   } );
 
 })();

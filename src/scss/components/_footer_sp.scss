@@ -1,0 +1,33 @@
+
+#footer {
+    width: 100%;
+    padding: 2.2rem 0 0.5rem 0;
+    background-color: #000;
+    color: #fff;
+
+    ul {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        list-style: none;
+    }
+
+    .link {
+        display: inline-block;
+        font-size: 0.8rem;
+        margin: 0 2rem 0 3.5rem;
+        font-family: 'Noto Sans JP', sans-serif;
+        a:link, a:visited, a:hover, a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    li.corp {
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 0.85rem;
+        font-family: 'Lato', sans-serif;
+    }
+}

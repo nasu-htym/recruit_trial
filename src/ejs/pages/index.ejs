@@ -75,8 +75,8 @@ const tel_message = "10:00～18:00 土日・祝日年末年始除く";
 <%# start page content -%>
 <!-- header -->
 <header id="header" class="header-top">
-  
 <div id="overlay-menu" class="overlay-menu hidden">
+  <div id="close">×</div>
   <div class="title-wrap">
     <div class="title">日本ALO音楽研究所</div>
     <div class="border"></div>
@@ -126,11 +126,13 @@ const tel_message = "10:00～18:00 土日・祝日年末年始除く";
         </li>
         <li class="txt"><%= tel_message %></li>        
       </ul>
+      <img class="tel-icon" src="<%= img_path + '/tel_sp.png' %>">
     </li>
     <li class="contact">
       <div class="contact-wrap">
         <a href="#">お問い合わせ</a>
       </div>
+      <img class="mail-icon" src="<%= img_path + '/mail_sp.png' %>">
     </li>
     <li id="menu">
       <div class="menu-wrap">
@@ -144,6 +146,9 @@ const tel_message = "10:00～18:00 土日・祝日年末年始除く";
 <section class="section section-intro" id="js-section-intro">
   <img class="back-img" src="<%= img_path + '/img1.png' %>">
   <div class="intro-wrap">
+    <div class="sp-logo">
+      <img class="logo" src="<%= img_path + '/logo.png' %>">
+    </div>
     <ul class="intro">
       <li class="title"> 日本ALO音楽研究所</li>
       <li class="logo">
@@ -170,9 +175,7 @@ const tel_message = "10:00～18:00 土日・祝日年末年始除く";
     </div>
     <div class="details-wrap">
       <div class="outline">
-        この文章はダミーです。文字の大きさ、<br>
-        量、字間、行間等を確認するために<br>
-        入れています。
+        この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
       </div>
       <div class="description"><%= dummy_sent %></div>
     </div>
@@ -195,7 +198,7 @@ const tel_message = "10:00～18:00 土日・祝日年末年始除く";
   </div>
   <div class="explanation-wrap">
     <div class="outline">
-      この文章はダミーです。<br>
+      この文章はダミーです。
       文字の大きさ、量、字間、行間等を確認するため
     <div class="description"><%= dummy_sent + dummy_sent %></div>
   </div>
@@ -257,7 +260,7 @@ const tel_message = "10:00～18:00 土日・祝日年末年始除く";
   <ul>
     <li class="link"><a href="#">企業案内</a></li>
     <li class="link"><a href="#">プライバシーポリシー</a></li>
-    <li class="corp">©COMPANY</li>
+    <li class="corp">© COMPANY</li>
   </ul>
 </footer>
 
